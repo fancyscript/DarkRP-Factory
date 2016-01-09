@@ -5,7 +5,11 @@ ENT.Author = "Chovski"
 ENT.Spawnable = false
 
 function ENT:initVars()
-	self.model = "models/Items/battery.mdl"
+	self.model = "models/props_vehicles/generatortrailer01.mdl"
+	self.metalModel = "models/gibs/scanner_gib02.mdl"
+	self.metalCount = 0
+	self.metalMax = 10
+	self.touchCooldown = false
 	self.damage = 500
 	self.sparking = false
 	self.producing = false
