@@ -14,7 +14,7 @@ function ENT:Initialize() -- Init the ent first
     self.damage = 500
     self.sparking = false
     self.producing = false
-    
+
     local phys = self:GetPhysicsObject()
     phys:Wake()
 
@@ -23,7 +23,7 @@ function ENT:Initialize() -- Init the ent first
 end
  
 function ENT:StartSound()
-	self.sound = CreateSound(self, Sound("ambient/levels/labs/equipment_printer_loop1.wav"))
+	self.sound = CreateSound(self, Sound("vehicles/v8/v8_start_loop1.wav"))
     self.sound:SetSoundLevel(60)
     self.sound:PlayEx(1, 100)
 end
@@ -131,7 +131,7 @@ function ENT:Think()
         effectdata:SetMagnitude(1)
         effectdata:SetScale(1)
         effectdata:SetRadius(2)
-        util.Effect("Sparks", effectdata)
+        util.Effect("SMOKE", effectdata)
     end
 
     if not self.producing then
