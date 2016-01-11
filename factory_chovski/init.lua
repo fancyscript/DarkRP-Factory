@@ -24,7 +24,7 @@ end
  
 function ENT:StartSound()
 	self.sound = CreateSound(self, Sound("vehicles/v8/v8_start_loop1.wav"))
-    self.sound:SetSoundLevel(60)
+    self.sound:SetSoundLevel(100)
     self.sound:PlayEx(1, 100)
 end
 
@@ -131,7 +131,7 @@ function ENT:Think()
         effectdata:SetMagnitude(1)
         effectdata:SetScale(1)
         effectdata:SetRadius(2)
-        util.Effect("SMOKE", effectdata)
+        util.Effect("Sparks", effectdata)
     end
 
     if not self.producing then

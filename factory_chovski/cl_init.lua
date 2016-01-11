@@ -6,6 +6,7 @@ end
 
 function ENT:Draw()
 	self:DrawModel()
+	self:SetColor(Color(49, 32, 3, 255))
 
 	local Pos = self:GetPos()
 	local Ang = self:GetAngles()
